@@ -1,9 +1,7 @@
 from fastapi import FastAPI
 
-def create_app():
-    app = FastAPI()
+# FastAPI 애플리케이션 객체 생성
+app = FastAPI()
 
-    from .routes import router
-    app.include_router(router)
-
-    return app
+# 라우터 및 모델 등록
+from . import routes
